@@ -21,4 +21,16 @@
     });
 
 
+
+
+
+    $.ajax({
+        url: 'https://tsetecustom.nr.ybridge.io:1880/checkStatus',
+        type: 'GET'
+    }).done(function (response) {
+        response = JSON.parse(response);
+        callback(response);
+    });
+
+
 </script>
